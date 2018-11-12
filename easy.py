@@ -1,14 +1,5 @@
 import os
-import shutil
 
-def copy_file(first_file,backup_file): #копирование файла
-    try:
-        first_file = input("Введите путь копируемого файла: ")
-        backup_file = input("Укажите путь куда нужно скопировать файл: ")
-        shutil.copy(first_file,backup_file)
-    except:
-        FileNotFoundError
-        print("Указанный пусть не найдён")
 
 def new_directory (name,number): #создание новой директории
     name = input("Введите название директории - ")
