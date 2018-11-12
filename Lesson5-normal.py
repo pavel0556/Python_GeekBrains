@@ -1,3 +1,4 @@
+
 # Задача-1:
 # Напишите небольшую консольную утилиту,
 # позволяющую работать с папками текущей директории.
@@ -13,34 +14,20 @@
 # Для решения данной задачи используйте алгоритмы из задания easy,
 # оформленные в виде соответствующих функций,
 # и импортированные в данный файл из easy.py
-
 import os
-import easy
+import easy.py
 
+i = int(input("Введите значение"))
+if i == 1:
+    print("Ваша текущая директория",os.getcwd())
+    a = input("Введите полный путь к папки: ")
+    print("Ваша директория изменена на:",a)
+elif i == 2:
+    print("Содержимое папки :",easy.list_dir(a))
+elif i == 3:
+    easy.delete_directory(name)
+elif i == 4:
+    easy.new_directory(name, number)
+else:
+    print("Проверьте правельность ввода")
 
-for i in 5:
-    if i == 1:
-        home_dir = input("Перейти в папку")
-    print('Перейти в папку - набрать "1"')
-    print('Просмотреть содержимое текущей папки - выбрать 2')
-    print('Удалить папку - выбрать 3')
-    print('Создать папку - выбрать 4')
-    print('для выхода - выбрать 0')
-    exitos = input('Выбрать: ' )
-    print(exitos)
-    if exitos == '1':
-        dir_name = input ('наберите полный путь папки: ')
-        easy.change_dir(dir_name)
-    elif exitos == '2':
-        dir_name = os.getcwd()
-        easy.list_dir(dir_name)
-    elif exitos == '3':
-        dir_name = input('наберите полный путь папки: ')
-        easy.delete_dir(dir_name)
-    elif exitos == '4':
-        dir_name = input('наберите полный путь папки: ')
-        easy.make_dir(dir_name)
-    elif exitos == '0':
-        pass
-    else:
-        print('Такого пункта меню нет')
